@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# Software Distribution on Helix
+This is going to be some description.
 
 ## Environments
 - Preview: https://main--{repo}--{owner}.hlx.page/
