@@ -1,0 +1,114 @@
+.spectrum-HelpText--sizeS {
+  --spectrum-helptext-neutral-textonly-text-padding-bottom: var(--spectrum-helptext-s-neutral-textonly-text-padding-bottom);
+  --spectrum-helptext-neutral-texticon-text-size: var(--spectrum-helptext-s-neutral-texticon-text-size, var(--spectrum-global-dimension-font-size-75));
+  --spectrum-helptext-neutral-texticon-icon-gap: var(--spectrum-helptext-s-neutral-texticon-icon-gap, var(--spectrum-global-dimension-size-85));
+  --spectrum-helptext-negative-texticon-icon-padding-top: var(--spectrum-helptext-s-negative-texticon-icon-padding-top, var(--spectrum-global-dimension-size-50));
+  --spectrum-helptext-negative-texticon-icon-padding-bottom: var(--spectrum-helptext-s-negative-texticon-icon-padding-bottom, var(--spectrum-global-dimension-size-50));
+  --spectrum-helptext-neutral-textonly-text-transform: var(--spectrum-helptext-s-neutral-textonly-text-transform, none);
+  --spectrum-helptext-neutral-textonly-text-padding-top: var(--spectrum-helptext-s-neutral-textonly-text-padding-top, var(--spectrum-global-dimension-static-size-50));
+  --spectrum-helptext-neutral-textonly-text-line-height: var(--spectrum-helptext-s-neutral-textonly-text-line-height, var(--spectrum-alias-component-text-line-height));
+  --spectrum-helptext-neutral-textonly-text-letter-spacing: var(--spectrum-helptext-s-neutral-textonly-text-letter-spacing, var(--spectrum-global-font-letter-spacing-none));
+}
+
+.spectrum-HelpText--sizeM {
+  --spectrum-helptext-neutral-textonly-text-padding-bottom: var(--spectrum-helptext-m-neutral-textonly-text-padding-bottom);
+  --spectrum-helptext-neutral-texticon-text-size: var(--spectrum-helptext-m-neutral-texticon-text-size, var(--spectrum-global-dimension-font-size-75));
+  --spectrum-helptext-neutral-texticon-icon-gap: var(--spectrum-helptext-m-neutral-texticon-icon-gap, var(--spectrum-global-dimension-size-100));
+  --spectrum-helptext-negative-texticon-icon-padding-top: var(--spectrum-helptext-m-negative-texticon-icon-padding-top, var(--spectrum-global-dimension-size-40));
+  --spectrum-helptext-negative-texticon-icon-padding-bottom: var(--spectrum-helptext-m-negative-texticon-icon-padding-bottom, var(--spectrum-global-dimension-size-40));
+  --spectrum-helptext-neutral-textonly-text-transform: var(--spectrum-helptext-m-neutral-textonly-text-transform, none);
+  --spectrum-helptext-neutral-textonly-text-padding-top: var(--spectrum-helptext-m-neutral-textonly-text-padding-top, var(--spectrum-global-dimension-static-size-50));
+  --spectrum-helptext-neutral-textonly-text-line-height: var(--spectrum-helptext-m-neutral-textonly-text-line-height, var(--spectrum-alias-component-text-line-height));
+  --spectrum-helptext-neutral-textonly-text-letter-spacing: var(--spectrum-helptext-m-neutral-textonly-text-letter-spacing, var(--spectrum-global-font-letter-spacing-none));
+}
+
+.spectrum-HelpText--sizeL {
+  --spectrum-helptext-neutral-texticon-text-size: var(--spectrum-helptext-l-neutral-texticon-text-size, var(--spectrum-global-dimension-font-size-100));
+  --spectrum-helptext-neutral-texticon-icon-gap: var(--spectrum-helptext-l-neutral-texticon-icon-gap, var(--spectrum-global-dimension-size-115));
+  --spectrum-helptext-negative-texticon-icon-padding-top: var(--spectrum-helptext-l-negative-texticon-icon-padding-top, var(--spectrum-global-dimension-size-75));
+  --spectrum-helptext-negative-texticon-icon-padding-bottom: var(--spectrum-helptext-l-negative-texticon-icon-padding-bottom, var(--spectrum-global-dimension-size-75));
+  --spectrum-helptext-neutral-textonly-text-transform: var(--spectrum-helptext-l-neutral-textonly-text-transform, none);
+  --spectrum-helptext-neutral-textonly-text-padding-top: var(--spectrum-helptext-l-neutral-textonly-text-padding-top, var(--spectrum-global-dimension-size-75));
+  --spectrum-helptext-neutral-textonly-text-padding-bottom: var(--spectrum-helptext-l-neutral-textonly-text-padding-bottom, var(--spectrum-global-dimension-size-115));
+  --spectrum-helptext-neutral-textonly-text-line-height: var(--spectrum-helptext-l-neutral-textonly-text-line-height, var(--spectrum-alias-component-text-line-height));
+  --spectrum-helptext-neutral-textonly-text-letter-spacing: var(--spectrum-helptext-l-neutral-textonly-text-letter-spacing, var(--spectrum-global-font-letter-spacing-none));
+}
+
+.spectrum-HelpText--sizeXL {
+  --spectrum-helptext-neutral-textonly-text-padding-top: var(--spectrum-helptext-xl-neutral-textonly-text-padding-top);
+  --spectrum-helptext-neutral-texticon-text-size: var(--spectrum-helptext-xl-neutral-texticon-text-size, var(--spectrum-global-dimension-font-size-200));
+  --spectrum-helptext-neutral-texticon-icon-gap: var(--spectrum-helptext-xl-neutral-texticon-icon-gap, var(--spectrum-global-dimension-size-125));
+  --spectrum-helptext-negative-texticon-icon-padding-top: var(--spectrum-helptext-xl-negative-texticon-icon-padding-top, var(--spectrum-global-dimension-size-115));
+  --spectrum-helptext-negative-texticon-icon-padding-bottom: var(--spectrum-helptext-xl-negative-texticon-icon-padding-bottom, var(--spectrum-global-dimension-size-115));
+  --spectrum-helptext-neutral-textonly-text-transform: var(--spectrum-helptext-xl-neutral-textonly-text-transform, none);
+  --spectrum-helptext-neutral-textonly-text-padding-bottom: var(--spectrum-helptext-xl-neutral-textonly-text-padding-bottom, var(--spectrum-global-dimension-size-130));
+  --spectrum-helptext-neutral-textonly-text-line-height: var(--spectrum-helptext-xl-neutral-textonly-text-line-height, var(--spectrum-alias-component-text-line-height));
+  --spectrum-helptext-neutral-textonly-text-letter-spacing: var(--spectrum-helptext-xl-neutral-textonly-text-letter-spacing, var(--spectrum-global-font-letter-spacing-none));
+}
+
+.spectrum-HelpText {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: var(--spectrum-helptext-neutral-texticon-text-size);
+}
+
+[dir="ltr"] .spectrum-HelpText .spectrum-HelpText-validationIcon {
+    margin-right: var(--spectrum-helptext-neutral-texticon-icon-gap);
+}
+
+[dir="rtl"] .spectrum-HelpText .spectrum-HelpText-validationIcon {
+    margin-left: var(--spectrum-helptext-neutral-texticon-icon-gap);
+}
+
+.spectrum-HelpText .spectrum-HelpText-validationIcon {
+    padding-top: var(--spectrum-helptext-negative-texticon-icon-padding-top);
+    padding-bottom: var(--spectrum-helptext-negative-texticon-icon-padding-bottom);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
+[dir="ltr"] .spectrum-HelpText .spectrum-HelpText-text {
+    margin-right: var(--spectrum-helptext-neutral-texticon-icon-gap);
+}
+
+[dir="rtl"] .spectrum-HelpText .spectrum-HelpText-text {
+    margin-left: var(--spectrum-helptext-neutral-texticon-icon-gap);
+}
+
+.spectrum-HelpText .spectrum-HelpText-text {
+    padding-top: var(--spectrum-helptext-neutral-textonly-text-padding-top);
+    padding-bottom: var(--spectrum-helptext-neutral-textonly-text-padding-bottom);
+    line-height: var(--spectrum-helptext-neutral-textonly-text-line-height);
+    text-transform: var(--spectrum-helptext-neutral-textonly-text-transform);
+    letter-spacing: var(--spectrum-helptext-neutral-textonly-text-letter-spacing);
+  }
+
+.spectrum-HelpText--neutral {
+  --spectrum-helptext-m-texticon-text-color-disabled: var(--spectrum-helptext-m-neutral-texticon-text-color-disabled, var(--spectrum-alias-text-color-disabled));
+  --spectrum-helptext-m-texticon-icon-color-disabled: var(--spectrum-helptext-m-neutral-texticon-icon-color-disabled, var(--spectrum-alias-icon-color-disabled));
+  --spectrum-helptext-m-texticon-text-color: var(--spectrum-helptext-m-neutral-texticon-text-color, var(--spectrum-alias-label-text-color));
+  --spectrum-helptext-m-texticon-icon-color: var(--spectrum-helptext-m-neutral-texticon-icon-color, var(--spectrum-alias-icon-color));
+}
+
+.spectrum-HelpText--negative {
+  --spectrum-helptext-m-texticon-text-color-disabled: var(--spectrum-helptext-m-negative-texticon-text-color-disabled, var(--spectrum-alias-text-color-disabled));
+  --spectrum-helptext-m-texticon-icon-color-disabled: var(--spectrum-helptext-m-negative-texticon-icon-color-disabled, var(--spectrum-alias-icon-color-disabled));
+  --spectrum-helptext-m-texticon-text-color: var(--spectrum-helptext-m-negative-texticon-text-color, var(--spectrum-semantic-negative-text-color-small));
+  --spectrum-helptext-m-texticon-icon-color: var(--spectrum-helptext-m-negative-texticon-icon-color, var(--spectrum-semantic-negative-icon-color));
+}
+
+.spectrum-HelpText .spectrum-HelpText-validationIcon {
+    color: var(--spectrum-helptext-m-texticon-icon-color);
+  }
+
+.spectrum-HelpText .spectrum-HelpText-text {
+    color: var(--spectrum-helptext-m-texticon-text-color);
+  }
+
+.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon {
+      color: var(--spectrum-helptext-m-texticon-icon-color-disabled);
+    }
+
+.spectrum-HelpText.is-disabled .spectrum-HelpText-text {
+      color: var(--spectrum-helptext-m-texticon-text-color-disabled);
+    }

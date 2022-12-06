@@ -1,0 +1,218 @@
+<!DOCTYPE html><html class="spectrum spectrum--light spectrum--medium" lang="en-US" dir="ltr"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Close Button - Spectrum CSS</title><meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-lightest.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-light.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-dark.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-darkest.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-medium.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-large.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/icon/index-vars.css"><!-- Include the actual component--><link rel="stylesheet" type="text/css" href="../index-vars.css"><link rel="stylesheet" type="text/css" href="css/site.css"><link rel="stylesheet" type="text/css" href="css/docs.css"><script src="js/loadicons/index.js"></script><script src="js/focus-ring-polyfill/index.js"></script><script src="js/typekit.js"></script><script src="js/SpectrumSwitcher.js"></script><script>loadIcons('dependencies/@spectrum-css/icon/spectrum-css-icons.svg');
+var switcher = new SpectrumSwitcher();
+</script><style type="text/css">body {
+  overflow: auto;
+}
+
+.spectrum-CSSExample-example {
+  border-radius: 0;
+}
+</style></head><body><article class="spectrum-CSSComponent"><header class="spectrum-CSSComponent-heading"><h1 class="spectrum-CSSComponent-title spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif"><a class="spectrum-BigSubtleLink" href="#undefined">Close Button</a></h1><p class="spectrum-CSSComponent-version spectrum-Body spectrum-Body--sizeS">Version 1.2.0</p></header><section class="spectrum-CSSComponent-description spectrum-Body spectrum-Body--sizeL"><p>A button used to close or dismiss components.</p>
+</section><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Icon Size - Regular</h3></header><section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeL"><p>Close button supports different sized icons. By default, you should use the following icons:</p>
+<table class="spectrum-Table spectrum-Table--sizeM">
+<thead class="spectrum-Table-head">
+<tr class="spectrum-Table-row">
+<th class="spectrum-Table-headCell">Close button classname</th>
+<th class="spectrum-Table-headCell">UI icon classname</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeS</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross75</code></td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeM</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross100</code></td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeL</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross200</code></td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeXL</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross300</code></td>
+</tr>
+</tbody>
+</table>
+</section><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example"><div class="spectrum-Examples">
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeS">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross75" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross100" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeL">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross200" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeXL">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross300" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+</div></section></article><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Icon Size - Large</h3></header><section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeL"><p>Close button supports different sized icons. For cases where you need large icons, you should use the following icons:</p>
+<table class="spectrum-Table spectrum-Table--sizeM">
+<thead class="spectrum-Table-head">
+<tr class="spectrum-Table-row">
+<th class="spectrum-Table-headCell">Close button classname</th>
+<th class="spectrum-Table-headCell">UI icon classname</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeS</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross200</code></td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeM</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross300</code></td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeL</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross400</code></td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-CloseButton--sizeXL</code></td>
+<td class="spectrum-Table-cell"><code class="spectrum-Code spectrum-Code--sizeS">.spectrum-UIIcon-Cross500</code></td>
+</tr>
+</tbody>
+</table>
+</section><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example"><div class="spectrum-Examples">
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeS">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross200" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross300" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeL">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross400" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross400" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="spectrum-Examples-item">
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+    <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeXL">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross500" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+</div></section></article><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Disabled</h3></header><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example"><button class="spectrum-CloseButton spectrum-CloseButton--sizeM" disabled>
+  <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+    <use xlink:href="#spectrum-css-icon-Cross300" />
+  </svg>
+</button>
+</div></section></article><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Static White</h3></header><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example"><div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+  <div class="spectrum-Examples" style="display: inline-flex; gap: 24px;">
+    <div class="spectrum-Examples-item">
+      <h4 style="color: white" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+      <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross300" />
+        </svg>
+      </button>
+      </div>
+    </div>
+    <div class="spectrum-Examples-item">
+      <h4 style="color: white" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+      <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" disabled>
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross300" />
+        </svg>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div></section></article><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Static Black</h3></header><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example"><div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+  <div class="spectrum-Examples" style="display: inline-flex; gap: 24px">
+    <div class="spectrum-Examples-item">
+      <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+      <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticBlack">
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross300" />
+        </svg>
+      </button>
+      </div>
+    </div>
+    <div class="spectrum-Examples-item">
+      <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+      <div class="spectrum-Examples-itemGroup">
+      <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticBlack" disabled>
+        <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross300" />
+        </svg>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div></section></article></article><div class="spectrum-Underlay" id="spectrum-underlay"></div></body></html>

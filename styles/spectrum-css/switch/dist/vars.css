@@ -1,0 +1,46 @@
+
+.spectrum-Switch {
+  --spectrum-switch-m-handle-size: var(--spectrum-alias-control-two-size-m);
+  --spectrum-switch-m-handle-border-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-switch-m-handle-border-radius: var(--spectrum-alias-control-two-border-radius-m);
+  --spectrum-switch-m-text-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-switch-m-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-switch-m-track-height: var(--spectrum-alias-control-three-height-m);
+  --spectrum-switch-m-track-width: var(--spectrum-alias-control-three-width-m);
+  --spectrum-switch-m-cursor-hit-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-switch-m-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-alias-focus-ring-gap: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-switch-m-track-color: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-m-handle-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-switch-m-handle-border-color: var(--spectrum-alias-toggle-border-color-default);
+  --spectrum-switch-m-text-color: var(--spectrum-alias-component-text-color-default);
+  --spectrum-switch-m-track-color-selected: var(--spectrum-alias-toggle-background-color-default);
+  --spectrum-switch-m-handle-border-color-selected: var(--spectrum-alias-toggle-background-color-default);
+  --spectrum-switch-m-handle-border-color-hover: var(--spectrum-alias-toggle-border-color-hover);
+  --spectrum-switch-m-text-color-hover: var(--spectrum-alias-component-text-color-hover);
+  --spectrum-switch-m-track-color-selected-hover: var(--spectrum-alias-toggle-background-color-hover);
+  --spectrum-switch-m-handle-border-color-selected-hover: var(--spectrum-alias-toggle-background-color-hover);
+  --spectrum-switch-m-handle-border-color-down: var(--spectrum-alias-toggle-border-color-down);
+  --spectrum-switch-m-text-color-down: var(--spectrum-alias-component-text-color-down);
+  --spectrum-switch-m-track-color-selected-down: var(--spectrum-alias-toggle-background-color-down);
+  --spectrum-switch-m-handle-border-color-selected-down: var(--spectrum-alias-toggle-background-color-down);
+  --spectrum-switch-m-track-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-m-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-switch-m-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
+  --spectrum-switch-m-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-switch-m-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-switch-m-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
+  --spectrum-switch-m-emphasized-track-color-selected: var(--spectrum-alias-toggle-background-color-emphasized-selected-default);
+  --spectrum-switch-m-emphasized-handle-border-color-selected: var(--spectrum-alias-toggle-background-color-emphasized-selected-default);
+  --spectrum-switch-m-emphasized-track-color-selected-hover: var(--spectrum-alias-toggle-background-color-emphasized-selected-hover);
+  --spectrum-switch-m-emphasized-handle-border-color-selected-hover: var(--spectrum-alias-toggle-background-color-emphasized-selected-hover);
+  --spectrum-switch-m-emphasized-track-color-selected-down: var(--spectrum-alias-toggle-background-color-emphasized-selected-down);
+  --spectrum-switch-m-emphasized-handle-border-color-selected-down: var(--spectrum-alias-toggle-background-color-emphasized-selected-down);
+  --spectrum-switch-m-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-switch-m-handle-border-color-key-focus: var(--spectrum-alias-toggle-border-color-key-focus);
+  --spectrum-switch-m-track-color-selected-key-focus: var(--spectrum-alias-toggle-background-color-key-focus);
+  --spectrum-switch-m-handle-border-color-selected-key-focus: var(--spectrum-alias-toggle-background-color-key-focus);
+  --spectrum-switch-m-emphasized-track-color-selected-key-focus: var(--spectrum-alias-toggle-background-color-emphasized-selected-key-focus);
+  --spectrum-switch-m-emphasized-handle-border-color-selected-key-focus: var(--spectrum-alias-toggle-background-color-emphasized-selected-key-focus);
+}

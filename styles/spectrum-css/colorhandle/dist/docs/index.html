@@ -1,0 +1,30 @@
+<!DOCTYPE html><html class="spectrum spectrum--light spectrum--medium" lang="en-US" dir="ltr"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Color Handle - Spectrum CSS</title><meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-lightest.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-light.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-dark.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-darkest.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-medium.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/vars/spectrum-large.css"><link rel="stylesheet" type="text/css" href="dependencies/@spectrum-css/colorloupe/index-vars.css"><!-- Include the actual component--><link rel="stylesheet" type="text/css" href="../index-vars.css"><link rel="stylesheet" type="text/css" href="css/site.css"><link rel="stylesheet" type="text/css" href="css/docs.css"><script src="js/loadicons/index.js"></script><script src="js/focus-ring-polyfill/index.js"></script><script src="js/typekit.js"></script><script src="js/SpectrumSwitcher.js"></script><script>loadIcons('dependencies/@spectrum-css/icon/spectrum-css-icons.svg');
+var switcher = new SpectrumSwitcher();
+</script><style type="text/css">body {
+  overflow: auto;
+}
+
+.spectrum-CSSExample-example {
+  border-radius: 0;
+}
+</style></head><body><article class="spectrum-CSSComponent"><header class="spectrum-CSSComponent-heading"><h1 class="spectrum-CSSComponent-title spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif"><a class="spectrum-BigSubtleLink" href="#undefined">Color Handle</a></h1><p class="spectrum-CSSComponent-version spectrum-Body spectrum-Body--sizeS">Version 1.0.11</p></header><section class="spectrum-CSSComponent-description spectrum-Body spectrum-Body--sizeL"><ul>
+<li>Set the <code class="spectrum-Code spectrum-Code--sizeS">background-color</code> style property of the <code class="spectrum-Code spectrum-Code--sizeS">.spectrum-ColorHandle-color</code> element to indicate the currently selected color</li>
+<li>Apply <code class="spectrum-Code spectrum-Code--sizeS">.is-open</code> to <code class="spectrum-Code spectrum-Code--sizeS">.spectrum-ColorLoupe</code> display the loupe</li>
+<li>Set the <code class="spectrum-Code spectrum-Code--sizeS">fill</code> style property of the <code class="spectrum-Code spectrum-Code--sizeS">.spectrum-ColorLoupe-inner</code> element to indicate the currently selected color</li>
+</ul>
+</section><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Standard</h3></header><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example spectrum-CSSExample-example--spacious"><div class="spectrum-ColorHandle" style="position: absolute; top: 50%; left: 50%;">
+  <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+</div>
+</div></section></article><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Disabled</h3></header><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example spectrum-CSSExample-example--spacious"><div class="spectrum-ColorHandle is-disabled" style="position: absolute; top: 75%; left: 50%;">
+  <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+</div>
+</div></section></article><article class="spectrum-CSSExample"><header><h3 class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">Open</h3></header><section class="spectrum-CSSExample-container"><div class="spectrum-CSSExample-example spectrum-CSSExample-example--spacious"><div class="spectrum-ColorHandle" style="position: absolute; top: 75%; left: 50%;">
+  <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+  <svg class="spectrum-ColorLoupe is-open">
+    <g transform="translate(1 1)">
+      <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgba(255, 0, 0, 0.5)" />
+      <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+    </g>
+  </svg>
+</div>
+</div></section></article></article><div class="spectrum-Underlay" id="spectrum-underlay"></div></body></html>

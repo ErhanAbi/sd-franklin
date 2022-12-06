@@ -1,0 +1,268 @@
+.spectrum-InputGroup {
+  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
+
+  --spectrum-inputgroup-generic-padding: var(--spectrum-global-dimension-size-150);
+
+  --spectrum-datepicker-range-input-width-first: calc(var(--spectrum-global-dimension-size-1600) - 2 * var(--spectrum-inputgroup-generic-padding));
+  --spectrum-datepicker-input-width-base: calc(var(--spectrum-datepicker-range-input-width-first) + var(--spectrum-textfield-m-texticon-icon-size, var(--spectrum-global-dimension-size-225)));
+  --spectrum-datepicker-input-width: calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400)));
+  --spectrum-datepicker-range-input-width-quiet-first: calc(var(--spectrum-global-dimension-size-900) + var(--spectrum-global-dimension-size-200));
+  --spectrum-datepicker-input-width-quiet: calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-textfield-m-texticon-icon-size, var(--spectrum-global-dimension-size-225)) + var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400)));
+
+  --spectrum-datepicker-datetime-input-width-first: calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-global-dimension-size-450));
+  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-textfield-m-texticon-icon-size, var(--spectrum-global-dimension-size-225)) + var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400)));
+
+  --spectrum-datepicker-datetime-quiet-input-width-first: calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-global-dimension-size-300));
+  --spectrum-datepicker-datetime-quiet-input-width: calc(var(--spectrum-datepicker-datetime-quiet-input-width-first) + var(--spectrum-textfield-m-texticon-icon-size, var(--spectrum-global-dimension-size-225)) + var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400)));
+
+  --spectrum-datepicker-range-dash-margin-left: calc(-0.5 * var(--spectrum-global-dimension-static-font-size-100, 14px));
+  --spectrum-datepicker-range-dash-padding-top: 0;
+  --spectrum-datepicker-range-dash-line-height: calc(var(--spectrum-textfield-m-texticon-height, var(--spectrum-global-dimension-size-400)) - var(--spectrum-global-dimension-size-100));
+  --spectrum-textfield-icon-inline-end-override: calc(var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400)) + var(--spectrum-global-dimension-size-100));
+}
+
+.🤫 {
+  width: var(--spectrum-textfield-icon-inline-end-override);
+}
+
+.spectrum-InputGroup {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-width: var(--spectrum-alias-single-line-width, var(--spectrum-global-dimension-size-2400));
+  border-radius: var(--spectrum-alias-border-radius-regular, var(--spectrum-global-dimension-size-50));
+}
+
+[dir="ltr"] .spectrum-InputGroup-button {
+  right: 0;
+}
+
+[dir="rtl"] .spectrum-InputGroup-button {
+  left: 0;
+}
+
+.spectrum-InputGroup-button {
+  position: absolute;
+}
+
+.spectrum-InputGroup-input {
+  padding-right: var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400));
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.spectrum-InputGroup--quiet {
+  border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+  --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400));
+}
+
+[dir="ltr"] .spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+
+    right: calc(-1 * var(--spectrum-alias-combobox-quiet-button-offset-x, var(--spectrum-global-dimension-size-100)));
+}
+
+[dir="rtl"] .spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+
+    left: calc(-1 * var(--spectrum-alias-combobox-quiet-button-offset-x, var(--spectrum-global-dimension-size-100)));
+}
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+    width: auto;
+  }
+
+.spectrum-Datepicker--range {
+  border-radius: var(--spectrum-alias-border-radius-regular, var(--spectrum-global-dimension-size-50));
+}
+
+.spectrum-Datepicker--range:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc(var(--spectrum-textfield-m-texticon-focus-ring-gap, var(--spectrum-alias-input-focusring-gap)) * -1);
+    border-radius: calc(var(--spectrum-textfield-m-texticon-border-radius, var(--spectrum-alias-border-radius-regular)) + var(--spectrum-textfield-m-texticon-focus-ring-gap, var(--spectrum-alias-input-focusring-gap)));
+    border-color: transparent;
+    transition: box-shadow var(--spectrum-global-animation-duration-100, 130ms) ease-in-out, border-color var(--spectrum-global-animation-duration-100, 130ms) ease-in-out;
+  }
+
+.spectrum-Datepicker--range.is-keyboardFocused:not(.spectrum-InputGroup--quiet):after {
+      box-shadow: 0 0 0 var(--spectrum-textfield-m-texticon-focus-ring-border-width, var(--spectrum-alias-component-focusring-size)) var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus, var(--spectrum-alias-focus-ring-color));
+    }
+
+.spectrum-Datepicker--range.is-keyboardFocused:not(.spectrum-InputGroup--quiet) .spectrum-InputGroup-textfield:after {
+      display: none;
+    }
+
+.spectrum-Datepicker--range.is-keyboardFocused.spectrum-InputGroup--quiet:after {
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      border-bottom: 2px solid var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus, var(--spectrum-alias-focus-ring-color));
+      bottom: calc(-1 * var(--spectrum-alias-input-quiet-focusline-gap, var(--spectrum-global-dimension-static-size-10)));
+    }
+
+.spectrum-Datepicker--range.spectrum-InputGroup--quiet {
+    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+  }
+
+.spectrum-Datepicker--range.spectrum-InputGroup--quiet .spectrum-InputGroup-textfield {
+      min-width: 0;
+      width: var(--spectrum-datepicker-input-width-quiet);
+    }
+
+.spectrum-Datepicker--range.spectrum-InputGroup--quiet .spectrum-InputGroup-textfield:first-of-type {
+        width: var(--spectrum-datepicker-range-input-width-quiet-first);
+      }
+
+.spectrum-Datepicker--range.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+      border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+    }
+
+.spectrum-Datepicker--range.spectrum-Datepicker--datetimeRange .spectrum-InputGroup-textfield {
+      width: var(--spectrum-datepicker-datetime-input-width);
+      min-width: 0;
+    }
+
+.spectrum-Datepicker--range.spectrum-Datepicker--datetimeRange .spectrum-InputGroup-textfield:first-of-type {
+        width: var(--spectrum-datepicker-datetime-input-width-first);
+      }
+
+.spectrum-Datepicker--range.spectrum-Datepicker--datetimeRange.spectrum-InputGroup--quiet .spectrum-InputGroup-textfield {
+        width: var(--spectrum-datepicker-datetime-quiet-input-width);
+      }
+
+.spectrum-Datepicker--range.spectrum-Datepicker--datetimeRange.spectrum-InputGroup--quiet .spectrum-InputGroup-textfield:first-of-type {
+          width: var(
+            --spectrum-datepicker-datetime-quiet-input-width-first
+          );
+        }
+
+.spectrum-Datepicker--range .spectrum-InputGroup-textfield {
+    -ms-flex: initial;
+        flex: initial;
+    min-width: 0;
+    width: var(--spectrum-datepicker-input-width);
+  }
+
+.spectrum-Datepicker--range .spectrum-InputGroup-textfield:first-of-type {
+      width: var(--spectrum-datepicker-range-input-width-first);
+    }
+
+[dir="ltr"] .spectrum-Datepicker--range .spectrum-InputGroup-textfield.is-invalid .spectrum-InputGroup-input {
+        padding-right: var(--spectrum-inputgroup-generic-padding);
+}
+
+[dir="rtl"] .spectrum-Datepicker--range .spectrum-InputGroup-textfield.is-invalid .spectrum-InputGroup-input {
+        padding-left: var(--spectrum-inputgroup-generic-padding);
+}
+
+.spectrum-Datepicker--range .spectrum-InputGroup-input {
+    width: 100%;
+  }
+
+[dir="ltr"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-startField {
+      border-right: 0;
+}
+
+[dir="rtl"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-startField {
+      border-left: 0;
+}
+
+[dir="ltr"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-startField {
+      padding-right: var(--spectrum-inputgroup-generic-padding);
+}
+
+[dir="rtl"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-startField {
+      padding-left: var(--spectrum-inputgroup-generic-padding);
+}
+
+.spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-startField {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+[dir="ltr"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-endField {
+      border-left: 0;
+}
+
+[dir="rtl"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-endField {
+      border-right: 0;
+}
+
+[dir="ltr"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-endField {
+      padding-left: var(--spectrum-inputgroup-generic-padding);
+}
+
+[dir="rtl"] .spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-endField {
+      padding-right: var(--spectrum-inputgroup-generic-padding);
+}
+
+.spectrum-Datepicker--range .spectrum-InputGroup-input.spectrum-Datepicker-endField {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+.spectrum-Datepicker--range .spectrum-Datepicker-rangeDash {
+    line-height: var(--spectrum-datepicker-range-dash-line-height);
+    padding-top: var(--spectrum-datepicker-range-dash-padding-top);
+    -ms-flex: initial;
+        flex: initial;
+    width: 0;
+    z-index: 1;
+  }
+
+.spectrum-Datepicker--range .spectrum-Datepicker-rangeDash:before {
+      content: "–";
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: var(--spectrum-datepicker-range-dash-margin-left);
+      margin-right: var(--spectrum-datepicker-range-dash-margin-left);
+      overflow: hidden;
+      text-align: center;
+      vertical-align: middle;
+      width: var(--spectrum-global-dimension-static-font-size-100, 14px);
+    }
+
+[dir="ltr"] .spectrum-Datepicker--range.spectrum-InputGroup--quiet .spectrum-Datepicker--rangeDash:before {
+        margin-left: var(--spectrum-datepicker-range-dash-margin-left);
+}
+
+[dir="rtl"] .spectrum-Datepicker--range.spectrum-InputGroup--quiet .spectrum-Datepicker--rangeDash:before {
+        margin-right: var(--spectrum-datepicker-range-dash-margin-left);
+}
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:hover,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:focus,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:active,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-selected,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-invalid {
+      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color, var(--spectrum-alias-input-border-color-default));
+    }
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled:hover {
+      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-disabled, var(--spectrum-alias-input-border-color-quiet-disabled));
+    }
+
+.spectrum-InputGroup--quiet:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) .spectrum-InputGroup-input,
+    .spectrum-InputGroup--quiet:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) .spectrum-InputGroup-button {
+      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-hover, var(--spectrum-alias-input-border-color-hover));
+    }
+
+.spectrum-InputGroup--quiet.is-invalid .spectrum-InputGroup-input,
+    .spectrum-InputGroup--quiet.is-invalid .spectrum-InputGroup-button {
+      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-invalid, var(--spectrum-alias-input-border-color-invalid-default));
+    }
+
+.spectrum-InputGroup.is-disabled .spectrum-Datepicker-rangeDash{
+  color: var(--spectrum-alias-text-color-disabled, var(--spectrum-global-color-gray-500));
+}

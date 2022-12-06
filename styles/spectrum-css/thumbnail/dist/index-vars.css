@@ -1,0 +1,165 @@
+.spectrum-Thumbnail {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+
+  width: var(--spectrum-thumbnail-width);
+  height: var(--spectrum-thumbnail-height);
+
+  border-radius: var(--spectrum-thumbnail-border-radius);
+  vertical-align: top;
+
+  overflow: hidden;
+
+  background-size: var(--spectrum-global-dimension-static-size-200, 16px) var(--spectrum-global-dimension-static-size-200, 16px);
+
+  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100, 8px), var(--spectrum-global-dimension-static-size-100, 8px) calc(-1 * var(--spectrum-global-dimension-static-size-100, 8px)), calc(-1 * var(--spectrum-global-dimension-static-size-100, 8px)) 0;
+}
+
+.spectrum-Thumbnail:before {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--spectrum-thumbnail-border-radius);
+  }
+
+.spectrum-Thumbnail--sizeXXS {
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-thumbnail-xxs-border-color-selected, var(--spectrum-alias-border-color-selected));
+  --spectrum-thumbnail-border-size-selected-key-focus: var(--spectrum-thumbnail-xxs-border-size-selected-key-focus, var(--spectrum-alias-border-size-thick));
+  --spectrum-thumbnail-border-size: var(--spectrum-thumbnail-xxs-border-size, var(--spectrum-alias-border-size-thin));
+  --spectrum-thumbnail-border-color: var(--spectrum-thumbnail-xxs-border-color, var(--spectrum-alias-border-color-translucent));
+  --spectrum-thumbnail-border-color-key-focus: var(--spectrum-thumbnail-xxs-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+  --spectrum-thumbnail-darksquare-background-color: var(--spectrum-thumbnail-xxs-darksquare-background-color, var(--spectrum-alias-thumbnail-darksquare-background-color));
+  --spectrum-thumbnail-border-radius: var(--spectrum-thumbnail-xxs-border-radius, var(--spectrum-alias-thumbnail-border-radius-small));
+  --spectrum-thumbnail-width: var(--spectrum-thumbnail-xxs-width, var(--spectrum-global-dimension-size-225));
+  --spectrum-thumbnail-height: var(--spectrum-thumbnail-xxs-height, var(--spectrum-global-dimension-size-225));
+}
+
+.spectrum-Thumbnail--sizeXS {
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-thumbnail-xs-border-color-selected, var(--spectrum-alias-border-color-selected));
+  --spectrum-thumbnail-border-size-selected-key-focus: var(--spectrum-thumbnail-xs-border-size-selected-key-focus, var(--spectrum-alias-border-size-thick));
+  --spectrum-thumbnail-border-size: var(--spectrum-thumbnail-xs-border-size, var(--spectrum-alias-border-size-thin));
+  --spectrum-thumbnail-border-color: var(--spectrum-thumbnail-xs-border-color, var(--spectrum-alias-border-color-translucent));
+  --spectrum-thumbnail-border-color-key-focus: var(--spectrum-thumbnail-xs-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+  --spectrum-thumbnail-darksquare-background-color: var(--spectrum-thumbnail-xs-darksquare-background-color, var(--spectrum-alias-thumbnail-darksquare-background-color));
+  --spectrum-thumbnail-border-radius: var(--spectrum-thumbnail-xs-border-radius, var(--spectrum-alias-thumbnail-border-radius-small));
+  --spectrum-thumbnail-width: var(--spectrum-thumbnail-xs-width, var(--spectrum-global-dimension-size-300));
+  --spectrum-thumbnail-height: var(--spectrum-thumbnail-xs-height, var(--spectrum-global-dimension-size-300));
+}
+
+.spectrum-Thumbnail--sizeS {
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-thumbnail-s-border-color-selected, var(--spectrum-alias-border-color-selected));
+  --spectrum-thumbnail-border-size-selected-key-focus: var(--spectrum-thumbnail-s-border-size-selected-key-focus, var(--spectrum-alias-border-size-thick));
+  --spectrum-thumbnail-border-size: var(--spectrum-thumbnail-s-border-size, var(--spectrum-alias-border-size-thin));
+  --spectrum-thumbnail-border-color: var(--spectrum-thumbnail-s-border-color, var(--spectrum-alias-border-color-translucent));
+  --spectrum-thumbnail-border-color-key-focus: var(--spectrum-thumbnail-s-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+  --spectrum-thumbnail-darksquare-background-color: var(--spectrum-thumbnail-s-darksquare-background-color, var(--spectrum-alias-thumbnail-darksquare-background-color));
+  --spectrum-thumbnail-border-radius: var(--spectrum-thumbnail-s-border-radius, var(--spectrum-alias-thumbnail-border-radius-small));
+  --spectrum-thumbnail-width: var(--spectrum-thumbnail-s-width, var(--spectrum-global-dimension-size-400));
+  --spectrum-thumbnail-height: var(--spectrum-thumbnail-s-height, var(--spectrum-global-dimension-size-400));
+}
+
+.spectrum-Thumbnail--sizeM {
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-thumbnail-m-border-color-selected, var(--spectrum-alias-border-color-selected));
+  --spectrum-thumbnail-border-size-selected-key-focus: var(--spectrum-thumbnail-m-border-size-selected-key-focus, var(--spectrum-alias-border-size-thick));
+  --spectrum-thumbnail-border-size: var(--spectrum-thumbnail-m-border-size, var(--spectrum-alias-border-size-thin));
+  --spectrum-thumbnail-border-color: var(--spectrum-thumbnail-m-border-color, var(--spectrum-alias-border-color-translucent));
+  --spectrum-thumbnail-border-color-key-focus: var(--spectrum-thumbnail-m-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+  --spectrum-thumbnail-darksquare-background-color: var(--spectrum-thumbnail-m-darksquare-background-color, var(--spectrum-alias-thumbnail-darksquare-background-color));
+  --spectrum-thumbnail-border-radius: var(--spectrum-thumbnail-m-border-radius, var(--spectrum-alias-thumbnail-border-radius-small));
+  --spectrum-thumbnail-width: var(--spectrum-thumbnail-m-width, var(--spectrum-global-dimension-size-500));
+  --spectrum-thumbnail-height: var(--spectrum-thumbnail-m-height, var(--spectrum-global-dimension-size-500));
+}
+
+.spectrum-Thumbnail--sizeL {
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-thumbnail-l-border-color-selected, var(--spectrum-alias-border-color-selected));
+  --spectrum-thumbnail-border-size-selected-key-focus: var(--spectrum-thumbnail-l-border-size-selected-key-focus, var(--spectrum-alias-border-size-thick));
+  --spectrum-thumbnail-border-size: var(--spectrum-thumbnail-l-border-size, var(--spectrum-alias-border-size-thin));
+  --spectrum-thumbnail-border-color: var(--spectrum-thumbnail-l-border-color, var(--spectrum-alias-border-color-translucent));
+  --spectrum-thumbnail-border-color-key-focus: var(--spectrum-thumbnail-l-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+  --spectrum-thumbnail-darksquare-background-color: var(--spectrum-thumbnail-l-darksquare-background-color, var(--spectrum-alias-thumbnail-darksquare-background-color));
+  --spectrum-thumbnail-border-radius: var(--spectrum-thumbnail-l-border-radius, var(--spectrum-alias-thumbnail-border-radius-small));
+  --spectrum-thumbnail-width: var(--spectrum-thumbnail-l-width, var(--spectrum-global-dimension-size-700));
+  --spectrum-thumbnail-height: var(--spectrum-thumbnail-l-height, var(--spectrum-global-dimension-size-700));
+}
+
+.spectrum-Thumbnail-image {
+  max-height: 100%;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.spectrum-Thumbnail--cover .spectrum-Thumbnail-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.spectrum-Thumbnail-background {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.spectrum-Thumbnail {
+  background-color: var(--spectrum-global-color-static-white, rgb(255, 255, 255));
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-thumbnail-darksquare-background-color) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-thumbnail-darksquare-background-color) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-thumbnail-darksquare-background-color) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-thumbnail-darksquare-background-color) 25.5%, transparent 25.5%);
+}
+
+.spectrum-Thumbnail:before {
+    box-shadow: inset 0 0 0 var(--spectrum-thumbnail-border-size) var(--spectrum-thumbnail-border-color);
+  }
+
+.spectrum-Thumbnail.is-selected {
+    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
+  }
+
+.spectrum-Thumbnail.is-selected:before {
+      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
+    }
+
+.spectrum-Thumbnail.is-focused,
+  .spectrum-Thumbnail.focus-ring {
+    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
+    outline: none;
+    overflow: visible;
+  }
+
+.spectrum-Thumbnail.is-focused:before, .spectrum-Thumbnail.focus-ring:before {
+      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
+    }
+
+.spectrum-Thumbnail.is-focused:after, .spectrum-Thumbnail.focus-ring:after {
+      box-shadow: 0 0 0 var(--spectrum-thumbnail-border-size-selected-key-focus) var(--spectrum-thumbnail-border-color-key-focus);
+      border-radius: calc(var(--spectrum-thumbnail-border-radius) + var(--spectrum-alias-focus-ring-gap, var(--spectrum-global-dimension-static-size-25)));
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: calc(var(--spectrum-alias-focus-ring-gap, var(--spectrum-global-dimension-static-size-25)) * -1);
+    }

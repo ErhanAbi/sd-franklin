@@ -1,7 +1,9 @@
 // eslint-disable-next-line import/no-cycle
-import { sampleRUM } from './lib-franklin.js';
+import { sampleRUM } from "./lib-franklin.js";
 
 // Core Web Vitals RUM collection
-sampleRUM('cwv');
+sampleRUM("cwv");
 
 // add more delayed functionality here
+import "./runtime-loader.js";
+import "./ushell-runtime-manager.js";

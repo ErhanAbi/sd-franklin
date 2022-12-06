@@ -1,5 +1,249 @@
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/scripts/lib-franklin.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
-<link rel="stylesheet" href="/styles/styles.css"/>
-<link rel="icon" href="data:,">
+<link rel="icon" href="data:," />
+
+<!-- modern normalize -->
+<link rel="stylesheet" href="/styles/modern-normalize.css" />
+
+<!-- Spectrum CSS -->
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/vars/dist/spectrum-global.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/vars/dist/spectrum-light.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/vars/dist/spectrum-medium.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/icon/dist/index-vars.css" />
+
+<link rel="stylesheet" href="/styles/spectrum-css/page/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/accordion/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/actionbar/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/actionbutton/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/actiongroup/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/actionmenu/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/asset/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/assetlist/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/avatar/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/badge/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/breadcrumb/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/button/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/buttongroup/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/calendar/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/card/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/checkbox/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/clearbutton/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/closebutton/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/coachmark/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/colorarea/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/colorhandle/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/colorloupe/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/colorslider/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/colorwheel/dist/index-vars.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/cyclebutton/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/dial/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/dialog/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/divider/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/dropindicator/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/dropzone/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/fieldgroup/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/fieldlabel/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/helptext/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/illustratedmessage/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/inlinealert/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/inputgroup/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/link/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/logicbutton/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/menu/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/miller/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/modal/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/page/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/pagination/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/picker/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/pickerbutton/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/popover/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/progressbar/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/progresscircle/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/quickaction/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/radio/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/rating/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/search/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/searchwithin/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/sidenav/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/site/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/slider/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/splitbutton/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/splitview/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/statuslight/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/steplist/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/stepper/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/switch/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/table/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/tabs/dist/index-vars.css" />
+<link rel="stylesheet" href="/styles/spectrum-css/tag/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/taggroup/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/textfield/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/thumbnail/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/toast/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/tooltip/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/tray/dist/index-vars.css" />
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/treeview/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/typography/dist/index-vars.css"
+/>
+<link
+  rel="stylesheet"
+  href="/styles/spectrum-css/underlay/dist/index-vars.css"
+/>
+<link rel="stylesheet" href="/styles/spectrum-css/well/dist/index-vars.css" />
+
+<!-- Software Distribution global styles -->
+<link rel="stylesheet" href="/styles/software-distribution.css" />

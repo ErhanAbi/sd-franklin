@@ -1,0 +1,176 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-Stepper {
+  &:hover:not(.is-disabled):not(.is-invalid):not(.is-focused):not(.is-keyboardFocused) {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown,
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-hover);
+    }
+  }
+
+  &.is-focused {
+    border-color: var(--spectrum-textfield-m-texticon-border-color-mouse-focus);
+
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-mouse-focus);
+    }
+
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-mouse-focus);
+      box-shadow: none;
+    }
+
+    &.is-invalid {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-mouse-focus);
+
+      .spectrum-Stepper-stepUp,
+      .spectrum-Stepper-stepDown {
+        border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-mouse-focus);
+      }
+
+      .spectrum-Stepper-input {
+        border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-mouse-focus);
+      }
+    }
+  }
+
+  &.is-keyboardFocused {
+    box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-key-focus);
+
+    .spectrum-Stepper-input,
+    .spectrum-Stepper-buttons {
+      box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-key-focus);
+    }
+
+    .spectrum-Stepper-input,
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-key-focus);
+    }
+
+    &.is-invalid {
+      box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
+
+      .spectrum-Stepper-stepUp,
+      .spectrum-Stepper-stepDown {
+        border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
+      }
+      .spectrum-Stepper-buttons {
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
+      }
+    }
+  }
+
+  &.is-invalid {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
+    }
+
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
+    }
+
+    &.is-keyboardFocused {
+      .spectrum-Stepper-input {
+        border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
+      }
+
+      .spectrum-Stepper-buttons {
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
+      }
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-disabled);
+    }
+  }
+}
+
+.spectrum-Stepper-stepUp,
+.spectrum-Stepper-stepDown {
+  border-color: var(--spectrum-textfield-m-texticon-border-color);
+
+  &:disabled {
+    border-color: var(--spectrum-textfield-m-texticon-border-color-disabled);
+  }
+}
+
+.spectrum-Stepper--quiet {
+  &.is-disabled {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-disabled);
+    }
+  }
+
+  .spectrum-Stepper-stepUp,
+  .spectrum-Stepper-stepDown {
+    border-color: var(--spectrum-textfield-m-quiet-texticon-border-color);
+
+    &:disabled {
+      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-disabled);
+    }
+  }
+
+  .spectrum-Stepper-input {
+    box-shadow: none;
+  }
+
+  &.is-invalid {
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
+    }
+
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
+    }
+  }
+
+  &.is-keyboardFocused,
+  &.is-focused {
+    box-shadow: none;
+
+    .spectrum-Stepper-buttons,
+    .spectrum-Stepper-input {
+      box-shadow: 0 1px 0 0 var(--spectrum-textfield-m-texticon-border-color-key-focus);
+    }
+
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-key-focus);
+    }
+
+    &.is-invalid {
+      box-shadow: none;
+
+      .spectrum-Stepper-input,
+      .spectrum-Stepper-buttons {
+        box-shadow: 0 1px 0 0 var(--spectrum-textfield-m-texticon-border-color-invalid);
+      }
+
+      .spectrum-Stepper-input {
+        border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
+      }
+
+      .spectrum-Stepper-stepDown {
+        border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
+      }
+    }
+  }
+}

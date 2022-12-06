@@ -1,0 +1,187 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../vars/css/components/spectrum-breadcrumb.css";
+
+.spectrum-Breadcrumbs--sizeS {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-s-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs--sizeM {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-m-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs--sizeL {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-l-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+
+.spectrum-Breadcrumbs {
+  display: flex;
+  justify-content: start;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.spectrum-Breadcrumbs-itemSeparator {
+  position: relative;
+
+  /* Fix alignment, it's not quite centered */
+  inset-block-start: var(--spectrum-global-dimension-size-10);
+
+  transform: logical scale(1) rotate(0deg);
+
+  opacity: 1;
+}
+
+.spectrum-Breadcrumbs-item--sizeS {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-s-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs-item--sizeM {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-m-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs-item--sizeL {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-l-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+
+.spectrum-Breadcrumbs-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+
+  box-sizing: border-box;
+  block-size: var(--spectrum-breadcrumb-list-height);
+
+  position: relative;
+
+  white-space: nowrap;
+  font-size: var(--spectrum-breadcrumb-item-text-size);
+  font-weight: var(--spectrum-breadcrumb-item-text-font-weight);
+  line-height: var(--spectrum-breadcrumb-item-text-line-height);
+
+  &:last-of-type {
+    font-weight: var(--spectrum-breadcrumb-title-text-font-weight);
+
+    .spectrum-Breadcrumbs-itemSeparator {
+      display: none;
+    }
+  }
+
+  > .spectrum-ActionButton {
+    margin-inline-end: var(--spectrum-breadcrumb-button-gap);
+  }
+}
+
+.spectrum-Breadcrumbs-itemLink {
+  cursor: default;
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+
+  padding-block: 0;
+  padding-inline: var(--spectrum-breadcrumb-item-padding-x);
+  block-size: var(--spectrum-breadcrumb-list-height);
+
+  margin-inline-end: var(--spectrum-breadcrumb-item-margin-right);
+
+  border-radius: var(--spectrum-breadcrumb-item-border-radius);
+
+  outline: none;
+
+  text-decoration: none;
+
+  &[href],
+  &[tabindex="0"] {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-ring {
+      text-decoration: underline;
+    }
+  }
+}
+
+.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
+.spectrum-Breadcrumbs-itemLink:focus-ring:before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+
+  border-width: var(--spectrum-breadcrumb-item-border-size-key-focus);
+  border-style: solid;
+  border-radius: var(--spectrum-breadcrumb-item-border-radius);
+
+  content: "";
+  pointer-events: none;
+}
+
+.spectrum-Breadcrumbs--multiline {
+  flex-wrap: wrap;
+
+  .spectrum-Breadcrumbs-item {
+    font-size: var(--spectrum-breadcrumb-multiline-item-text-size);
+    font-weight: var(--spectrum-breadcrumb-multiline-item-text-font-weight);
+    line-height: var(--spectrum-breadcrumb-multiline-item-text-line-height);
+
+    &:last-of-type {
+      block-size: auto;
+
+      inline-size: 100%;
+
+      margin-block-start: var(--spectrum-breadcrumb-multiline-title-margin-top);
+
+      font-size: var(--spectrum-breadcrumb-multiline-title-text-size);
+      font-weight: var(--spectrum-breadcrumb-multiline-title-text-font-weight);
+      line-height: var(--spectrum-breadcrumb-multiline-title-text-line-height);
+
+      .spectrum-Breadcrumbs-itemLink {
+        block-size: auto;
+
+        text-decoration: none;
+      }
+    }
+  }
+}

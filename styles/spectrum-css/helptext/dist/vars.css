@@ -1,0 +1,47 @@
+
+.spectrum-HelpText {
+  --spectrum-helptext-s-neutral-textonly-text-padding-bottom: undefined;
+  --spectrum-helptext-s-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-s-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
+  --spectrum-helptext-s-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-helptext-s-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-helptext-s-neutral-textonly-text-transform: none;
+  --spectrum-helptext-s-neutral-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-helptext-s-neutral-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
+  --spectrum-helptext-s-neutral-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-helptext-m-neutral-textonly-text-padding-bottom: undefined;
+  --spectrum-helptext-m-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-m-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
+  --spectrum-helptext-m-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-40);
+  --spectrum-helptext-m-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
+  --spectrum-helptext-m-neutral-textonly-text-transform: none;
+  --spectrum-helptext-m-neutral-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-helptext-m-neutral-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
+  --spectrum-helptext-m-neutral-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-helptext-l-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-helptext-l-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-helptext-l-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-helptext-l-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-75);
+  --spectrum-helptext-l-neutral-textonly-text-transform: none;
+  --spectrum-helptext-l-neutral-textonly-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-helptext-l-neutral-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-115);
+  --spectrum-helptext-l-neutral-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
+  --spectrum-helptext-l-neutral-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-helptext-xl-neutral-textonly-text-padding-top: undefined;
+  --spectrum-helptext-xl-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-helptext-xl-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-helptext-xl-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-115);
+  --spectrum-helptext-xl-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-115);
+  --spectrum-helptext-xl-neutral-textonly-text-transform: none;
+  --spectrum-helptext-xl-neutral-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-130);
+  --spectrum-helptext-xl-neutral-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
+  --spectrum-helptext-xl-neutral-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-helptext-m-neutral-texticon-text-color-disabled: var(--spectrum-alias-text-color-disabled);
+  --spectrum-helptext-m-neutral-texticon-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
+  --spectrum-helptext-m-neutral-texticon-text-color: var(--spectrum-alias-label-text-color);
+  --spectrum-helptext-m-neutral-texticon-icon-color: var(--spectrum-alias-icon-color);
+  --spectrum-helptext-m-negative-texticon-text-color-disabled: var(--spectrum-alias-text-color-disabled);
+  --spectrum-helptext-m-negative-texticon-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
+  --spectrum-helptext-m-negative-texticon-text-color: var(--spectrum-semantic-negative-text-color-small);
+  --spectrum-helptext-m-negative-texticon-icon-color: var(--spectrum-semantic-negative-icon-color);
+}
