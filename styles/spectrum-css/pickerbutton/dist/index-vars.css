@@ -1,0 +1,685 @@
+.spectrum-PickerButton {
+  position: relative;
+
+  display: -ms-inline-flexbox;
+
+  display: inline-flex;
+  box-sizing: border-box;
+
+  -ms-flex-align: center;
+
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  overflow: visible;
+  margin: 0;
+
+  border-style: solid;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: button;
+  vertical-align: top;
+
+  transition: background var(--spectrum-global-animation-duration-100, 130ms) ease-out,
+    border-color var(--spectrum-global-animation-duration-100, 130ms) ease-out,
+    color var(--spectrum-global-animation-duration-100, 130ms) ease-out,
+    box-shadow var(--spectrum-global-animation-duration-100, 130ms) ease-out;
+
+  text-decoration: none;
+  font-family: var(--spectrum-alias-body-text-font-family, var(--spectrum-global-font-family-base));
+
+  line-height: var(--spectrum-alias-component-text-line-height, var(--spectrum-global-font-line-height-small));
+
+  -ms-user-select: none;
+
+      user-select: none;
+  -webkit-user-select: none;
+
+  cursor: pointer;
+}
+
+.spectrum-PickerButton:focus {
+    outline: none;
+  }
+
+.spectrum-PickerButton::-moz-focus-inner {
+    border: 0;
+    border-style: none;
+    padding: 0;
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+.spectrum-PickerButton:disabled {
+    cursor: default;
+  }
+
+.spectrum-PickerButton--sizeS {
+  --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s, var(--spectrum-global-dimension-size-85));
+  --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s, var(--spectrum-global-dimension-size-85));
+  --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s, var(--spectrum-global-dimension-size-50));
+  padding: var(--spectrum-alias-infieldbutton-padding-s, 0)
+}
+
+.spectrum-PickerButton--sizeM {
+  --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m, var(--spectrum-global-dimension-size-125));
+  --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m, var(--spectrum-global-dimension-size-125));
+  --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m, var(--spectrum-global-dimension-size-75));
+  padding: var(--spectrum-alias-infieldbutton-padding-m, 0)
+}
+
+.spectrum-PickerButton--sizeL {
+  --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l, var(--spectrum-global-dimension-size-160));
+  --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l, var(--spectrum-global-dimension-size-160));
+  --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l, var(--spectrum-global-dimension-size-115));
+  padding: var(--spectrum-alias-infieldbutton-padding-l, 0)
+}
+
+.spectrum-PickerButton--sizeXL {
+  --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl, var(--spectrum-global-dimension-size-200));
+  --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl, var(--spectrum-global-dimension-size-200));
+  --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl, var(--spectrum-global-dimension-size-150));
+  padding: var(--spectrum-alias-infieldbutton-padding-xl, 0)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton--rounded) {
+  border-radius: var(--spectrum-alias-infieldbutton-border-radius, var(--spectrum-global-dimension-size-50))
+}
+
+.spectrum-PickerButton--rounded {
+  border-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded, var(--spectrum-global-dimension-size-50))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton--rounded) .spectrum-PickerButton-fill {
+  border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius, var(--spectrum-global-dimension-size-50));
+  border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius, var(--spectrum-global-dimension-size-50));
+  border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius, var(--spectrum-global-dimension-size-50));
+  border-bottom-right-radius: var(--spectrum-alias-infieldbutton-border-radius, var(--spectrum-global-dimension-size-50))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton--rounded).spectrum-PickerButton--right .spectrum-PickerButton-fill {
+  border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided, 0);
+  border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided, 0)
+}
+
+.spectrum-PickerButton--rounded .spectrum-PickerButton-fill {
+  border-top-left-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded, var(--spectrum-global-dimension-size-50));
+  border-top-right-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded, var(--spectrum-global-dimension-size-50));
+  border-bottom-left-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded, var(--spectrum-global-dimension-size-50));
+  border-bottom-right-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded, var(--spectrum-global-dimension-size-50))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton--rounded).spectrum-PickerButton--left .spectrum-PickerButton-fill {
+  border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided, 0);
+  border-bottom-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided, 0)
+}
+
+.spectrum-PickerButton--uiicononly .spectrum-PickerButton-fill {
+  padding-left: var(--spectrum-PickerButton-icononly-padding-x);
+  padding-right: var(--spectrum-PickerButton-icononly-padding-x)
+}
+
+.spectrum-PickerButton--uiicononly.spectrum-PickerButton--sizeS .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-s, var(--spectrum-global-dimension-size-300));
+  padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s, var(--spectrum-global-dimension-size-85));
+  padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s, var(--spectrum-global-dimension-size-85))
+}
+
+.spectrum-PickerButton--uiicononly.spectrum-PickerButton--sizeM .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400));
+  padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m, var(--spectrum-global-dimension-size-125));
+  padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m, var(--spectrum-global-dimension-size-125))
+}
+
+.spectrum-PickerButton--uiicononly.spectrum-PickerButton--sizeL .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-l, var(--spectrum-global-dimension-size-500));
+  padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l, var(--spectrum-global-dimension-size-160));
+  padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l, var(--spectrum-global-dimension-size-160))
+}
+
+.spectrum-PickerButton--uiicononly.spectrum-PickerButton--sizeXL .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-xl, var(--spectrum-global-dimension-size-600));
+  padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl, var(--spectrum-global-dimension-size-200));
+  padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl, var(--spectrum-global-dimension-size-200))
+}
+
+.spectrum-PickerButton--icononly.spectrum-PickerButton--sizeS .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-s, var(--spectrum-global-dimension-size-300));
+  padding-left: var(--spectrum-global-dimension-size-50);
+  padding-right: var(--spectrum-global-dimension-size-50)
+}
+
+.spectrum-PickerButton--icononly.spectrum-PickerButton--sizeM .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400));
+  padding-left: var(--spectrum-global-dimension-size-85);
+  padding-right: var(--spectrum-global-dimension-size-85)
+}
+
+.spectrum-PickerButton--icononly.spectrum-PickerButton--sizeL .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-l, var(--spectrum-global-dimension-size-500));
+  padding-left: var(--spectrum-global-dimension-size-125);
+  padding-right: var(--spectrum-global-dimension-size-125)
+}
+
+.spectrum-PickerButton--icononly.spectrum-PickerButton--sizeXL .spectrum-PickerButton-fill {
+  width: var(--spectrum-alias-infieldbutton-full-height-xl, var(--spectrum-global-dimension-size-600));
+  padding-left: var(--spectrum-global-dimension-size-160);
+  padding-right: var(--spectrum-global-dimension-size-160)
+}
+
+.spectrum-PickerButton--textuiicon .spectrum-PickerButton-fill {
+  width: auto
+}
+
+.spectrum-PickerButton-fill {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  border-style: solid;
+  border-width: var(--spectrum-alias-infieldbutton-border-size, var(--spectrum-global-dimension-static-size-10))
+}
+
+.spectrum-PickerButton--sizeS .spectrum-PickerButton-fill {
+  gap: var(--spectrum-global-dimension-size-75);
+  height: var(--spectrum-alias-infieldbutton-full-height-s, var(--spectrum-global-dimension-size-300))
+}
+
+.spectrum-PickerButton--sizeM .spectrum-PickerButton-fill {
+  gap: var(--spectrum-global-dimension-size-85);
+  height: var(--spectrum-alias-infieldbutton-full-height-m, var(--spectrum-global-dimension-size-400))
+}
+
+.spectrum-PickerButton--sizeL .spectrum-PickerButton-fill {
+  gap: var(--spectrum-global-dimension-size-65);
+  height: var(--spectrum-alias-infieldbutton-full-height-l, var(--spectrum-global-dimension-size-500))
+}
+
+.spectrum-PickerButton--sizeXL .spectrum-PickerButton-fill {
+  gap: var(--spectrum-global-dimension-size-85);
+  height: var(--spectrum-alias-infieldbutton-full-height-xl, var(--spectrum-global-dimension-size-600))
+}
+
+.spectrum-PickerButton--textuiicon.spectrum-PickerButton--sizeS .spectrum-PickerButton-fill {
+  padding-left: var(--spectrum-global-dimension-size-115);
+  padding-right: var(--spectrum-global-dimension-size-100)
+}
+
+.spectrum-PickerButton--textuiicon.spectrum-PickerButton--sizeM .spectrum-PickerButton-fill {
+  padding-left: var(--spectrum-global-dimension-size-160);
+  padding-right: var(--spectrum-global-dimension-size-125)
+}
+
+.spectrum-PickerButton--textuiicon.spectrum-PickerButton--sizeL .spectrum-PickerButton-fill {
+  padding-left: var(--spectrum-global-dimension-size-185);
+  padding-right: var(--spectrum-global-dimension-size-150)
+}
+
+.spectrum-PickerButton--textuiicon.spectrum-PickerButton--sizeXL .spectrum-PickerButton-fill {
+  padding-left: var(--spectrum-global-dimension-size-225);
+  padding-right: var(--spectrum-global-dimension-size-200)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton:disabled.spectrum-PickerButton--low .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-disabled, transparent)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton:disabled.spectrum-PickerButton--medium .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-disabled, transparent)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton:disabled.spectrum-PickerButton--high .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled, var(--spectrum-alias-component-background-color-disabled))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--low .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-default, transparent)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--low:hover .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover, transparent)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--low:active .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down, transparent)
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--medium .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default, var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--medium:hover .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover, var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--medium:active .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down, var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--high .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default, var(--spectrum-alias-component-background-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--high:hover .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover, var(--spectrum-alias-component-background-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--high:active .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down, var(--spectrum-alias-component-background-color-down))
+}
+
+.spectrum-PickerButton.is-open .spectrum-PickerButton-fill {
+  background-color: var(--spectrum-alias-component-background-color-down, var(--spectrum-global-color-gray-200))
+}
+
+.spectrum-PickerButton-label {
+  padding-top: var(--spectrum-PickerButton-label-padding-y);
+  padding-bottom: var(--spectrum-PickerButton-label-padding-y);
+  font-family: var(--spectrum-global-font-body-text-font-family);
+  font-style: var(--spectrum-global-font-style-regular, normal);
+  font-weight: var(--spectrum-global-font-body-text-font-weight);
+  line-height: var(--spectrum-global-font-component-text-line-height);
+  letter-spacing: var(--spectrum-global-font-letter-spacing-none, 0);
+  text-transform: none
+}
+
+.spectrum-PickerButton--sizeS .spectrum-PickerButton-label {
+  padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s, var(--spectrum-global-dimension-size-50));
+  padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s, var(--spectrum-global-dimension-size-50));
+  font-size: var(--spectrum-global-dimension-font-size-75)
+}
+
+.spectrum-PickerButton--sizeM .spectrum-PickerButton-label {
+  padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m, var(--spectrum-global-dimension-size-75));
+  padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m, var(--spectrum-global-dimension-size-75));
+  font-size: var(--spectrum-global-dimension-font-size-100)
+}
+
+.spectrum-PickerButton--sizeL .spectrum-PickerButton-label {
+  padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l, var(--spectrum-global-dimension-size-115));
+  padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l, var(--spectrum-global-dimension-size-115));
+  font-size: var(--spectrum-global-dimension-font-size-200)
+}
+
+.spectrum-PickerButton--sizeXL .spectrum-PickerButton-label {
+  padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl, var(--spectrum-global-dimension-size-150));
+  padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl, var(--spectrum-global-dimension-size-150));
+  font-size: var(--spectrum-global-dimension-font-size-300)
+}
+
+.spectrum-PickerButton--uiicononly .spectrum-PickerButton-label {
+  display: none
+}
+
+.spectrum-PickerButton--icononly .spectrum-PickerButton-label {
+  display: none
+}
+
+.spectrum-PickerButton--textuiicon .spectrum-PickerButton-label {
+  display: initial
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open) .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color, var(--spectrum-alias-component-text-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton:disabled .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-disabled, var(--spectrum-global-color-gray-500))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open) .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-default, var(--spectrum-global-color-gray-800))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open):hover .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-hover, var(--spectrum-global-color-gray-900))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open):active .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-down, var(--spectrum-global-color-gray-900))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--error .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-error-default, var(--spectrum-semantic-negative-text-color-small))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--error:hover .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-error-hover, var(--spectrum-semantic-negative-text-color-small-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton--error:active .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-error-down, var(--spectrum-semantic-negative-text-color-small-down))
+}
+
+.spectrum-PickerButton.is-open .spectrum-PickerButton-label {
+  color: var(--spectrum-alias-component-text-color-down, var(--spectrum-global-color-gray-900))
+}
+
+.spectrum-PickerButton--uiicononly .spectrum-PickerButton-icon {
+  display: none
+}
+
+.spectrum-PickerButton--icononly .spectrum-PickerButton-icon {
+  display: initial
+}
+
+.spectrum-PickerButton--textuiicon .spectrum-PickerButton-icon {
+  display: none
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open) .spectrum-PickerButton-icon {
+  color: var(--spectrum-alias-component-icon-color, var(--spectrum-alias-component-icon-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton:disabled .spectrum-PickerButton-icon {
+  color: var(--spectrum-alias-component-icon-color-disabled, var(--spectrum-alias-icon-color-disabled))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open) .spectrum-PickerButton-icon {
+  color: var(--spectrum-alias-component-icon-color-default, var(--spectrum-alias-icon-color))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open):hover .spectrum-PickerButton-icon {
+  color: var(--spectrum-alias-component-icon-color-hover, var(--spectrum-alias-icon-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open):active .spectrum-PickerButton-icon {
+  color: var(--spectrum-alias-component-icon-color-down, var(--spectrum-alias-icon-color-down))
+}
+
+.spectrum-PickerButton.is-open .spectrum-PickerButton-icon {
+  color: var(--spectrum-alias-component-icon-color-down, var(--spectrum-alias-icon-color-down))
+}
+
+.spectrum-PickerButton--sizeS .spectrum-PickerButton-icon {
+  margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-s, var(--spectrum-global-dimension-size-50));
+  margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-s, var(--spectrum-global-dimension-size-50));
+  width: var(--spectrum-global-dimension-size-200);
+  height: var(--spectrum-global-dimension-size-200);
+  gap: var(--spectrum-global-dimension-size-85)
+}
+
+.spectrum-PickerButton--sizeM .spectrum-PickerButton-icon {
+  margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-m, var(--spectrum-global-dimension-size-85));
+  margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-m, var(--spectrum-global-dimension-size-85));
+  width: var(--spectrum-global-dimension-size-225);
+  height: var(--spectrum-global-dimension-size-225);
+  gap: var(--spectrum-global-dimension-size-100)
+}
+
+.spectrum-PickerButton--sizeL .spectrum-PickerButton-icon {
+  margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-l, var(--spectrum-global-dimension-size-125));
+  margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-l, var(--spectrum-global-dimension-size-125));
+  gap: var(--spectrum-global-dimension-size-115)
+}
+
+.spectrum-PickerButton--sizeXL .spectrum-PickerButton-icon {
+  margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-xl, var(--spectrum-global-dimension-size-160));
+  margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-xl, var(--spectrum-global-dimension-size-160));
+  width: var(--spectrum-global-dimension-size-275);
+  height: var(--spectrum-global-dimension-size-275);
+  gap: var(--spectrum-global-dimension-size-125)
+}
+
+.spectrum--medium .spectrum-PickerButton--sizeL .spectrum-PickerButton-icon {
+  width: var(--spectrum-global-dimension-static-size-250, 20px);
+  height: var(--spectrum-global-dimension-static-size-250, 20px)
+}
+
+.spectrum--large .spectrum-PickerButton--sizeL .spectrum-PickerButton-icon {
+  width: var(--spectrum-global-dimension-static-size-300, 24px);
+  height: var(--spectrum-global-dimension-static-size-300, 24px)
+}
+
+.spectrum-PickerButton--uiicononly .spectrum-PickerButton-UIIcon {
+  display: initial
+}
+
+.spectrum-PickerButton--icononly .spectrum-PickerButton-UIIcon {
+  display: none
+}
+
+.spectrum-PickerButton--textuiicon .spectrum-PickerButton-UIIcon {
+  display: initial
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open) .spectrum-PickerButton-UIIcon {
+  color: var(--spectrum-alias-component-icon-color, var(--spectrum-alias-component-icon-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton.is-open).spectrum-PickerButton:disabled .spectrum-PickerButton-UIIcon {
+  color: var(--spectrum-alias-component-icon-color-disabled, var(--spectrum-alias-icon-color-disabled))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open) .spectrum-PickerButton-UIIcon {
+  color: var(--spectrum-alias-component-icon-color-default, var(--spectrum-alias-icon-color))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open):hover .spectrum-PickerButton-UIIcon {
+  color: var(--spectrum-alias-component-icon-color-hover, var(--spectrum-alias-icon-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-open):active .spectrum-PickerButton-UIIcon {
+  color: var(--spectrum-alias-component-icon-color-down, var(--spectrum-alias-icon-color-down))
+}
+
+.spectrum-PickerButton.is-open .spectrum-PickerButton-UIIcon {
+  color: var(--spectrum-alias-component-icon-color-down, var(--spectrum-alias-icon-color-down))
+}
+
+.spectrum-PickerButton-UIIcon {
+  transform: rotate(90deg);
+  margin-top: var(--spectrum-PickerButton-icon-margin-y);
+  margin-bottom: var(--spectrum-PickerButton-icon-margin-y)
+}
+
+.spectrum-PickerButton--sizeS .spectrum-PickerButton-UIIcon {
+  margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-s, var(--spectrum-global-dimension-size-85));
+  margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-s, var(--spectrum-global-dimension-size-85));
+  width: var(--spectrum-alias-ui-icon-chevron-size-100);
+  height: var(--spectrum-alias-ui-icon-chevron-size-100)
+}
+
+.spectrum-PickerButton--sizeM .spectrum-PickerButton-UIIcon {
+  margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-m, var(--spectrum-global-dimension-size-125));
+  margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-m, var(--spectrum-global-dimension-size-125));
+  width: var(--spectrum-alias-ui-icon-chevron-size-200);
+  height: var(--spectrum-alias-ui-icon-chevron-size-200)
+}
+
+.spectrum-PickerButton--sizeL .spectrum-PickerButton-UIIcon {
+  margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-l, var(--spectrum-global-dimension-size-160));
+  margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-l, var(--spectrum-global-dimension-size-160));
+  width: var(--spectrum-alias-ui-icon-chevron-size-300);
+  height: var(--spectrum-alias-ui-icon-chevron-size-300)
+}
+
+.spectrum-PickerButton--sizeXL .spectrum-PickerButton-UIIcon {
+  margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-xl, var(--spectrum-global-dimension-size-200));
+  margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-xl, var(--spectrum-global-dimension-size-200));
+  width: var(--spectrum-alias-ui-icon-chevron-size-400);
+  height: var(--spectrum-alias-ui-icon-chevron-size-400)
+}
+
+.spectrum-PickerButton:disabled.spectrum-PickerButton--low .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled, transparent)
+}
+
+.spectrum-PickerButton:disabled.spectrum-PickerButton--medium .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-border-color-disabled, transparent)
+}
+
+.spectrum-PickerButton:disabled.spectrum-PickerButton--high .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled, var(--spectrum-alias-component-background-color-disabled))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--low.spectrum-PickerButton.is-invalid .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--medium.spectrum-PickerButton.is-invalid .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-input-border-color-invalid-default, var(--spectrum-semantic-negative-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid:hover .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-input-border-color-invalid-hover, var(--spectrum-semantic-negative-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid:active .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-input-border-color-invalid-down, var(--spectrum-semantic-negative-color-down))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid:focus .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid.is-focused .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus, var(--spectrum-semantic-negative-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid:focus-visible .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton--high.spectrum-PickerButton.is-invalid.is-keyboardFocused .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-input-border-color-invalid-key-focus, var(--spectrum-alias-border-color-key-focus))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low:hover .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low:active .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low:focus .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low.is-focused .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low:focus-visible .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--low.is-keyboardFocused .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium:hover .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium:active .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium:focus .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium.is-focused .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium:focus-visible .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--medium.is-keyboardFocused .spectrum-PickerButton-fill {
+  border-color: transparent
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-border-color-default, var(--spectrum-alias-input-border-color-default))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high:hover .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-border-color-hover, var(--spectrum-alias-input-border-color-hover))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high:active .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-border-color-down, var(--spectrum-alias-input-border-color-down))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high:focus .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high.is-focused .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus, var(--spectrum-alias-input-border-color-mouse-focus))
+}
+
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high:focus-visible .spectrum-PickerButton-fill,
+.spectrum-PickerButton:not(.spectrum-PickerButton:disabled).spectrum-PickerButton:not(.spectrum-PickerButton.is-invalid).spectrum-PickerButton--high.is-keyboardFocused .spectrum-PickerButton-fill {
+  border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus, var(--spectrum-alias-input-border-color-key-focus))
+}
+
+.spectrum-PickerButton-focusRing {
+  display: none;
+  border-style: solid;
+  border-width: var(--spectrum-alias-focus-ring-size, var(--spectrum-global-dimension-static-size-25));
+  border-color: var(--spectrum-alias-background-color-transparent, transparent)
+}
+
+.spectrum-PickerButton:focus-visible .spectrum-PickerButton-focusRing,
+.spectrum-PickerButton.is-keyboardFocused .spectrum-PickerButton-focusRing {
+  display: initial;
+  border-color: var(--spectrum-alias-focus-ring-color, var(--spectrum-alias-focus-color))
+}
+
+.spectrum-PickerButton--sizeS .spectrum-PickerButton-focusRing {
+  border-radius: var(--spectrum-global-dimension-size-125)
+}
+
+.spectrum-PickerButton--sizeM .spectrum-PickerButton-focusRing {
+  border-radius: var(--spectrum-global-dimension-size-130)
+}
+
+.spectrum-PickerButton--sizeL .spectrum-PickerButton-focusRing {
+  border-radius: var(--spectrum-global-dimension-size-150)
+}
+
+.spectrum-PickerButton--sizeXL .spectrum-PickerButton-focusRing {
+  border-radius: var(--spectrum-global-dimension-size-175)
+}
+
+.spectrum-PickerButton {
+
+  border-style: none;
+  background-color: transparent;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+
+  --spectrum-infieldbutton-border-color-override: initial;
+}
+
+.spectrum-PickerButton-label {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.spectrum-PickerButton-fill {
+  box-sizing: border-box;
+  border-color: var(--spectrum-infieldbutton-border-color-override);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+
+  transition: border-color var(--spectrum-global-animation-duration-100, 130ms) ease-in-out;
+}
+
+.spectrum-PickerButton--uiicononly .spectrum-PickerButton-fill {
+    padding: 0 !important;
+  }
+
+.spectrum-PickerButton-UIIcon {
+  margin: 0 !important;
+}

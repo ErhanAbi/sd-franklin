@@ -1,0 +1,40 @@
+header.header-wrapper {
+  display: none;
+}
+
+footer.footer-wrapper {
+  display: none;
+}
+
+body.spectrum {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+body main {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 17rem auto;
+  grid-template-areas: "filters main";
+
+  /* justify-content: center;
+  align-items: flex-start;
+  flex-flow: row nowrap; */
+  /* gap: 10px; */
+}
+
+.filters-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  grid-area: filters;
+  padding: 1rem;
+  border-right: 1px solid var(--spectrum-global-color-gray-50);
+}
+
+.results-container {
+  grid-area: main;
+  margin: 1.5rem;
+}

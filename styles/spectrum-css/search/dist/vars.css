@@ -1,0 +1,16 @@
+
+.spectrum-Search {
+  --spectrum-actionbutton-m-texticon-min-width: var(--spectrum-global-dimension-size-400);
+  --spectrum-alias-ui-icon-cross-size-100: undefined;
+  --spectrum-alias-search-border-radius: var(--spectrum-global-dimension-size-50);
+  --spectrum-alias-search-padding-left-m: undefined;
+  --spectrum-alias-workflow-icon-size-m: var(--spectrum-global-dimension-size-225);
+  --spectrum-textfield-m-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
+  --spectrum-textfield-m-texticon-border-size: var(--spectrum-alias-input-border-size);
+  --spectrum-alias-search-border-radius-quiet: 0;
+  --spectrum-textfield-m-texticon-icon-color: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-search-m-icon-color-hover: var(--spectrum-alias-component-icon-color-hover);
+  --spectrum-search-m-icon-color-down: var(--spectrum-alias-component-icon-color-down);
+  --spectrum-search-m-icon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
+  --spectrum-textfield-m-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
+}

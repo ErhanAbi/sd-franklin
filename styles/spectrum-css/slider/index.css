@@ -1,0 +1,434 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../vars/css/components/spectrum-slider.css";
+
+.spectrum-Slider {
+  @remapvars {
+    find: --spectrum-slider-m-;
+    replace: --spectrum-slider-;
+  }
+  @remapvars {
+    find: --spectrum-slider-tick-m-;
+    replace: --spectrum-slider-tick-;
+  }
+
+  /* todo: this is 0px in DNA, which seems wrong */
+  --spectrum-slider-label-gap-y: var(--spectrum-global-dimension-size-85);
+
+  --spectrum-slider-controls-margin: calc(
+    var(--spectrum-slider-handle-width) / 2
+  );
+  --spectrum-slider-track-margin-offset: calc(
+    var(--spectrum-slider-controls-margin) * -1
+  );
+
+  --spectrum-slider-handle-margin-top: calc(
+    var(--spectrum-slider-handle-width) / -2
+  );
+  --spectrum-slider-handle-margin-left: calc(
+    var(--spectrum-slider-handle-width) / -2
+  );
+
+  --spectrum-slider-track-handleoffset: calc(var(--spectrum-slider-handle-gap));
+  --spectrum-slider-track-middle-handleoffset: calc(
+    var(--spectrum-slider-handle-gap) +
+      calc(var(--spectrum-slider-handle-width) / 2)
+  );
+
+  --spectrum-slider-input-top: calc(
+    var(--spectrum-slider-handle-margin-top) / 4
+  );
+  --spectrum-slider-input-left: calc(
+    var(--spectrum-slider-handle-margin-left) / 4
+  );
+
+  --spectrum-slider-color-min-height: auto;
+  --spectrum-slider-color-track-padding: 0;
+  --spectrum-slider-color-track-top: 0;
+  --spectrum-slider-color-track-margin-top: 0;
+  --spectrum-slider-color-track-margin-left: 0;
+  --spectrum-slider-color-track-margin-right: 0;
+  --spectrum-slider-color-handle-top: 50%;
+
+  --spectrum-slider-ramp-margin-top: 0;
+  --spectrum-slider-range-track-reset: 0;
+  --spectrum-slide-label-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slide-label-text-line-height: var(
+    --spectrum-global-font-line-height-small
+  );
+  --spectrum-slide-label-margin-bottom: -3px;
+  --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
+}
+
+.spectrum-Slider {
+  position: relative;
+
+  /* Don't let z-index'd child elements float above other things on the page */
+  z-index: 1;
+  display: block;
+  min-block-size: var(--spectrum-slider-height);
+  min-inline-size: var(--spectrum-slider-min-width);
+
+  user-select: none;
+}
+
+.spectrum-Slider-controls {
+  display: inline-block;
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: auto;
+
+  /* These calculations prevent the track from spilling outside of the control */
+  inline-size: calc(100% - calc(var(--spectrum-slider-controls-margin) * 2));
+  margin-inline-start: var(--spectrum-slider-controls-margin);
+  min-block-size: var(--spectrum-slider-height);
+
+  vertical-align: top;
+}
+
+.spectrum-Slider-track,
+.spectrum-Slider-fill {
+  block-size: var(--spectrum-slider-track-height);
+  box-sizing: border-box;
+
+  position: absolute;
+  z-index: 1;
+  inset-block-start: calc(var(--spectrum-slider-height) / 2);
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+
+  margin-block-start: calc(var(--spectrum-slider-track-height) / -2);
+
+  pointer-events: none;
+}
+
+.spectrum-Slider-track,
+.spectrum-Slider-fill {
+  padding-block: 0;
+  padding-inline: 0 var(--spectrum-slider-track-handleoffset);
+  margin-inline-start: var(--spectrum-slider-track-margin-offset);
+
+  &::before {
+    content: "";
+    display: block;
+    block-size: 100%;
+
+    border-radius: var(--spectrum-slider-track-border-radius);
+  }
+}
+
+.spectrum-Slider-fill {
+  margin-inline-start: 0;
+  padding-block: 0;
+  padding-inline: calc(
+      var(--spectrum-slider-controls-margin) +
+        var(--spectrum-slider-track-handleoffset)
+    )
+    0;
+}
+
+.spectrum-Slider-fill--right {
+  padding-block: 0;
+  padding-inline: 0
+    calc(
+      var(--spectrum-slider-controls-margin) +
+        var(--spectrum-slider-track-handleoffset)
+    );
+}
+
+.spectrum-Slider-track ~ .spectrum-Slider-track {
+  inset-inline-start: auto;
+  inset-inline-end: var(--spectrum-slider-range-track-reset);
+  padding-block: 0;
+  padding-inline: var(--spectrum-slider-track-handleoffset) 0;
+  margin-inline-start: var(--spectrum-slider-range-track-reset);
+  margin-inline-end: var(--spectrum-slider-track-margin-offset);
+}
+
+.spectrum-Slider--range {
+  .spectrum-Slider-value {
+    user-select: text;
+  }
+
+  .spectrum-Slider-track {
+    &:first-of-type {
+      padding-block: 0;
+      padding-inline: 0 var(--spectrum-slider-track-handleoffset);
+      inset-inline-start: var(--spectrum-slider-range-track-reset);
+      inset-inline-end: auto;
+      margin-inline-start: var(--spectrum-slider-track-margin-offset);
+    }
+
+    /* Force specificity otherwise the ~ rules above override */
+    &:dir(ltr),
+    &:dir(rtl) {
+      padding-block: 0;
+      padding-inline: var(--spectrum-slider-track-middle-handleoffset)
+        var(--spectrum-slider-track-middle-handleoffset);
+      inset-inline-start: auto;
+      inset-inline-end: auto;
+      margin-inline: var(--spectrum-slider-range-track-reset);
+      margin-block: var(--spectrum-slider-range-track-reset);
+    }
+    &:last-of-type {
+      padding-block: 0;
+      padding-inline: var(--spectrum-slider-track-handleoffset) 0;
+      inset-inline-start: auto;
+      inset-inline-end: var(--spectrum-slider-range-track-reset);
+      margin-inline-end: var(--spectrum-slider-track-margin-offset);
+    }
+  }
+}
+
+.spectrum-Slider-ramp {
+  margin-block-start: var(--spectrum-slider-ramp-margin-top);
+  block-size: var(--spectrum-slider-ramp-track-height);
+
+  position: absolute;
+  inset-inline-start: var(--spectrum-slider-track-margin-offset);
+  inset-inline-end: var(--spectrum-slider-track-margin-offset);
+  inset-block-start: calc(var(--spectrum-slider-ramp-track-height) / 2);
+
+  svg {
+    inline-size: 100%;
+    block-size: 100%;
+
+    /* Flip the ramp automatically for RTL */
+    transform: logical rotate(0deg);
+  }
+}
+
+.spectrum-Slider-handle {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--spectrum-slider-height) / 2);
+  z-index: 2;
+
+  display: inline-block;
+  box-sizing: border-box;
+
+  inline-size: var(--spectrum-slider-handle-width);
+  block-size: var(--spectrum-slider-handle-height);
+
+  margin-block: var(--spectrum-slider-handle-margin-top) 0;
+  margin-inline: calc(var(--spectrum-slider-handle-width) / -2) 0;
+
+  border-width: var(--spectrum-slider-handle-border-size);
+  border-style: solid;
+
+  border-radius: var(--spectrum-slider-handle-border-radius);
+
+  transition: border-width var(--spectrum-slider-animation-duration) ease-in-out;
+
+  outline: none;
+
+  &:active,
+  &.is-focused,
+  &.is-dragged {
+    border-width: var(--spectrum-slider-handle-border-size);
+  }
+
+  &:active,
+  &.is-focused,
+  &.is-dragged,
+  &.is-tophandle {
+    z-index: 3;
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transition: box-shadow var(--spectrum-global-animation-duration-100)
+        ease-out,
+      width var(--spectrum-global-animation-duration-100) ease-out,
+      height var(--spectrum-global-animation-duration-100) ease-out;
+
+    width: var(--spectrum-slider-handle-width);
+    height: var(--spectrum-slider-handle-height);
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 100%;
+  }
+
+  &.is-focused {
+    &:before {
+      width: calc(
+        var(--spectrum-slider-handle-width) +
+          var(--spectrum-alias-focus-ring-gap) * 2
+      );
+      height: calc(
+        var(--spectrum-slider-handle-height) +
+          var(--spectrum-alias-focus-ring-gap) * 2
+      );
+    }
+  }
+}
+
+.spectrum-Slider-input {
+  /*  Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  inline-size: var(--spectrum-slider-handle-width);
+  block-size: var(--spectrum-slider-handle-height);
+  padding: 0;
+  position: absolute;
+  inset-block-start: var(--spectrum-slider-input-top);
+  inset-inline-start: var(--spectrum-slider-input-left);
+  overflow: hidden;
+  opacity: 0.000001;
+  cursor: default;
+  -webkit-appearance: none;
+  border: 0;
+  pointer-events: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.spectrum-Slider-labelContainer {
+  display: flex;
+  position: relative;
+
+  inline-size: auto;
+
+  padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
+
+  font-size: var(--spectrum-slide-label-text-size);
+  line-height: var(--spectrum-slide-label-text-line-height);
+  margin-block-end: var(--spectrum-slide-label-margin-bottom);
+}
+
+.spectrum-Slider-label {
+  padding-inline-start: 0;
+  flex-grow: 1;
+}
+
+.spectrum-Slider-value {
+  flex-grow: 0;
+  padding-inline-end: 0;
+  cursor: default;
+  font-feature-settings: "tnum";
+  text-align: end;
+}
+
+.spectrum-Slider-value {
+  margin-inline-start: var(--spectrum-slider-label-gap-x);
+}
+
+.spectrum-Slider-ticks {
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 0;
+
+  margin: 0 var(--spectrum-slider-track-margin-offset);
+  margin-block-start: calc(
+    var(--spectrum-slider-tick-mark-height) +
+      calc(var(--spectrum-slider-track-height) / 2)
+  );
+}
+
+.spectrum-Slider-tick {
+  position: relative;
+
+  inline-size: var(--spectrum-slider-tick-mark-width);
+
+  &:after {
+    display: block;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: calc(
+      50% - calc(var(--spectrum-slider-tick-mark-width) / 2)
+    );
+    content: "";
+    inline-size: var(--spectrum-slider-tick-mark-width);
+    block-size: var(--spectrum-slider-tick-mark-height);
+
+    border-radius: var(--spectrum-slider-tick-mark-border-radius);
+  }
+
+  .spectrum-Slider-tickLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-block: calc(var(--spectrum-slider-label-gap-y) + var(--spectrum-slider-tick-mark-height)) 0;
+    margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
+      calc(var(--spectrum-slider-label-gap-x) * -1);
+
+    font-size: var(--spectrum-slide-label-text-size);
+    line-height: var(--spectrum-slide-label-text-line-height);
+  }
+
+  &:first-of-type,
+  &:last-of-type {
+    .spectrum-Slider-tickLabel {
+      display: block;
+      position: absolute;
+      margin-inline: 0;
+    }
+  }
+
+  &:first-of-type {
+    /* fix off-by-one alignment */
+    inset-inline-start: calc(var(--spectrum-slider-tick-mark-width) / -2);
+    .spectrum-Slider-tickLabel {
+      inset-inline-start: 0;
+    }
+  }
+
+  &:last-of-type {
+    /* fix off-by-one alignment */
+    inset-inline-end: calc(var(--spectrum-slider-tick-mark-width) / -2);
+    .spectrum-Slider-tickLabel {
+      inset-inline-end: 0;
+    }
+  }
+}
+
+
+.spectrum-Slider {
+  &.is-disabled {
+    cursor: default;
+
+    .spectrum-Slider-handle {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
+
+/* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
+.spectrum-Slider-handleContainer,
+.spectrum-Slider-trackContainer {
+  width: calc(100% + var(--spectrum-slider-handle-width));
+
+  position: absolute;
+  top: calc(var(--spectrum-slider-track-height) / 2 - 1px);
+
+  margin-left: calc(var(--spectrum-slider-handle-width) / 2 * -1);
+}
+
+.spectrum-Slider-trackContainer {
+  height: var(--spectrum-slider-height);
+
+  /* stop edges from peeking out */
+  overflow: hidden;
+}
