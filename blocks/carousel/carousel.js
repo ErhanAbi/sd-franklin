@@ -20,13 +20,16 @@ function getTransformedItems(block) {
       item.querySelectorAll(":scope > div");
     title.classList.add(
       ...classList(
-        "spectrum-Heading spectrum-Heading--sizeM spectrum-Heading--light"
+        "carousel-item-title spectrum-Heading spectrum-Heading--sizeM spectrum-Heading--light"
       )
     );
     description.classList.add(
-      ...classList("spectrum-Body spectrum-Body--sizeS")
+      ...classList(
+        "carousel-item-description spectrum-Body spectrum-Body--sizeS"
+      )
     );
     picture.classList.add("carousel-item-picture");
+    buttonContainer.classList.add("carousel-item-actions");
     [...buttonContainer.querySelectorAll("a")].forEach((anchor) => {
       anchor.classList.add(
         ...classList(
@@ -45,6 +48,8 @@ function getTransformedItems(block) {
  * @param {Element} block
  */
 function decorateBlock(block) {
+  const innerBlocks = getTransformedItems(block).map((div) => div.outerHTML);
+
   const html = tpl`
     <div class="action action-previous">
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
@@ -54,9 +59,7 @@ function decorateBlock(block) {
         </button>
     </div>
     <div class="carousel-items">
-        ${getTransformedItems(block)
-          .map((div) => div.outerHTML)
-          .join("")}
+        ${innerBlocks}
     </div>
     <div class="action action-next">
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
@@ -66,20 +69,16 @@ function decorateBlock(block) {
         </button>
     </div>
     <ol class="indicators">
-        <li class="indicator indicator--active">
-            <button class="indicator-btn">
-                <svg class="spectrum-Icon spectrum-Icon--sizeS" viewBox="0 0 18 18">
-                    <circle cx="9" cy="9" r="8"></circle>
-                </svg>
-            </button>
-        </li>
-        <li class="indicator">
-            <button class="indicator-btn">
-                <svg class="spectrum-Icon spectrum-Icon--sizeS" viewBox="0 0 18 18">
-                    <circle cx="9" cy="9" r="8"></circle>
-                </svg>
-            </button>
-        </li>
+        ${innerBlocks.map(
+          () =>
+            `<li class="indicator indicator--active">
+                <button class="indicator-btn spectrum-ActionButton spectrum-ActionButton--sizeS spectrum-ActionButton--quiet">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeS" viewBox="0 0 18 18">
+                        <circle cx="9" cy="9" r="8"></circle>
+                    </svg>
+                </button>
+            </li>`
+        )}
     </ol>
   `;
 

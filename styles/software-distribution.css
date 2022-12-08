@@ -38,3 +38,7 @@ body main {
   grid-area: main;
   margin: 1.5rem;
 }
+
+.hidden {
+  display: none;
+}

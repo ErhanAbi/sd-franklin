@@ -10,6 +10,8 @@
   grid-template-areas:
     "action-previous carousel-items action-next"
     "action-previous indicators action-next";
+
+  background-color: #eeeefc;
 }
 
 .action {
@@ -30,8 +32,36 @@
 .action-next {
   grid-area: action-next;
 }
+
 .indicators {
   grid-area: indicators;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.indicator {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  color: #d3d3d3;
+}
+.indicator--active {
+  color: #505050;
+}
+.indicator-btn {
+  padding: 1px 4px;
+  border: none;
+}
+.indicator-btn .spectrum-Icon {
+  width: 10px;
+  height: 10px;
 }
 
 .carousel-items {
@@ -52,7 +82,34 @@
 
 .carousel-item {
   min-width: 100%;
-  display: inline-block;
+
+  display: grid;
+  grid-template-rows: min-content minmax(4rem, 6rem) min-content;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "title picture"
+    "description picture"
+    "actions picture";
+  gap: 12px 1rem;
+  padding-top: 2rem;
+
   scroll-snap-align: center;
   scroll-snap-stop: always;
+}
+
+.carousel-item-title {
+  grid-area: title;
+}
+.carousel-item-description {
+  grid-area: description;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.carousel-item-picture {
+  grid-area: picture;
+}
+
+.carousel-item-actions {
+  grid-area: actions;
 }

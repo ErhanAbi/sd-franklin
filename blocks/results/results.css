@@ -1,0 +1,24 @@
+results-table .spectrum-Table {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+results-table .spectrum-Table th.title {
+    padding-left: 42px;
+}
+
+results-table .spectrum-Table td.table-cell-first {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+results-table .spectrum-Table td.table-cell-first img {
+  min-width: 18px;
+  min-height: 18px;
+  height: 18px;
+  width: 18px;
+  margin-right: 0.5rem;
+  background: 0;
+  mix-blend-mode: revert;
+}
