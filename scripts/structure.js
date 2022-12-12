@@ -5,7 +5,15 @@
  * @returns Element|HTMLCollection
  */
 export function tpl(strings, ...values) {
-  const htmlString = String.raw({ raw: strings }, ...values);
+  const transformedValues = values.map((value) => {
+    if (Array.isArray(value)) {
+      return value.join(``);
+    }
+    if (typeof value[Symbol.iterator] === "function") {
+      return [...value].join("");
+    }
+  });
+  const htmlString = String.raw({ raw: strings }, ...transformedValues);
   const div = document.createElement("div");
   div.innerHTML = htmlString;
   if (div.childElementCount > 1) {
@@ -51,12 +59,29 @@ export function classList(...classes) {
   return cssClasses;
 }
 
+/**
+ *
+ * @param  {...any} classes
+ * @returns string
+ */
+export function classListStr(...classes) {
+  return classList(...classes).join(" ");
+}
+
+/**
+ * "This string Is Transformed" -> "this_string_is_transformed"
+ * @param {string} str
+ */
+export function stringToKey(str) {
+  return str.toLowerCase().replace(" ", "_");
+}
+
 function addSpectrum() {
   document.body.classList.add(
-    "spectrum",
-    "spectrum--medium",
-    "spectrum--light"
+    ...classList("spectrum spectrum--medium spectrum--light")
   );
+  document.querySelector("html").setAttribute("dir", "ltr");
+  document.querySelector("html").setAttribute("lang", "en");
 }
 
 export function initializeSDPage() {

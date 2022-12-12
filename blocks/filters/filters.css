@@ -1,0 +1,36 @@
+.filters.block > div {
+  display: none;
+}
+
+.search-container .spectrum-Search {
+  width: 100%;
+}
+.search-container .spectrum-Textfield {
+  width: 100%;
+}
+
+.filter-toggle {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-filter {
+  --width: 240px;
+  width: var(--width);
+  margin-top: 1rem;
+}
+.dropdown-filter:first-child {
+  margin-top: 2rem;
+}
+.dropdown-filter button.spectrum-Picker {
+  width: 100%;
+}
+.dropdown-filter div.spectrum-Popover {
+  width: var(--width);
+}
+
+.spectrum-Popover.is-open {
+  z-index: 1;
+}
