@@ -1,18 +1,6 @@
 const getConfiguration = () => {
   const menu = [
     { text: "General", url: "/content/software-distribution/en/general.html" },
-    {
-      text: "Adobe Experience Manager",
-      url: "/content/software-distribution/en/aem.html",
-    },
-    {
-      text: "AEM as a Cloud Service",
-      url: "/content/software-distribution/en/aemcloud.html",
-    },
-    {
-      text: "Adobe Campaign",
-      url: "/content/software-distribution/en/campaign.html",
-    },
   ];
 
   return {

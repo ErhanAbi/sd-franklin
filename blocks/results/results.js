@@ -94,7 +94,14 @@ class ResultsTable extends LitElement {
           ) {
             return;
           }
-          result = row[optionGroup].toLowerCase() === value.toLowerCase();
+
+          if (Array.isArray(row[optionGroup])) {
+            result = row[optionGroup]
+              .map((el) => el.toLowerCase())
+              .includes(value.toLowerCase());
+          } else {
+            result = row[optionGroup].toLowerCase() === value.toLowerCase();
+          }
         });
         return result;
       });
@@ -188,7 +195,6 @@ export default function decorateResults(block) {
   );
 
   block.innerHTML = "";
-  console.log(block);
 
   render(html`<results-table .columns=${tableCols} />`, block);
 }
